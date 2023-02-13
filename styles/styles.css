@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: blanchedalmond;
+}
+
+.nav-link {
+    margin-right: 20px;
+}
+
+/* body {
+    min-height: 100vh;
+} */
+
+main {
+    background-color: blanchedalmond;
+    min-height: 100vh;
+}
+
+.rapunsel {
+    background-color: rgb(255, 169, 88);
+    height: 86px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rapunsel > a {
+    text-decoration: none;
+    color: black;
+    font-size: 3rem;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
+}
+
+form div {
+    margin-right: 12px;
+}
+
+.cardsss {
+    padding: 10px 10px 0 10px;
+}
+
+.detailcard {
+    padding: 15px 15px 10px 15px;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.card > img {
+    height: 200px;
+    object-fit: cover;
+}
+
+footer {
+    background-color: beige;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+footer img {
+    width: 48px;
+}
+
+footer a {
+    margin: 10px;
+}
