@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /* overflow-x: hidden; */
 }
 
 header {
@@ -18,43 +19,81 @@ header {
 
 main {
     background-color: blanchedalmond;
-    min-height: 100vh;
+    min-height: calc(100vh - 84.8px - 86px - 70px);
+    overflow-x: hidden;
 }
 
-.rapunsel {
+.carrusel {
     background-color: rgb(255, 169, 88);
     height: 86px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* text-align: center; */
 }
 
-.rapunsel > a {
+.carrusel2 {
+    background-color: rgb(255, 169, 88);
+    height: 86px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+}
+
+.carrusel > a {
     text-decoration: none;
     color: black;
     font-size: 3rem;
 }
 
-form {
+.form-column {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin: 32px auto;
+}
+
+.form-column input {
+    width: 320px;
+}
+
+#msg {
+    height: 100px;
+    margin-bottom: 32px;
+}
+
+.form-filtros {
     display: flex;
     justify-content: center;
     padding: 20px 0px;
 }
 
-form div {
+.form-filtros div {
     margin-right: 12px;
 }
 
 .cardsss {
-    padding: 10px 10px 0 10px;
+    padding: 10px 20px 0 20px;
 }
 
 .detailcard {
     padding: 15px 15px 10px 15px;
 }
 
+.img-detail {
+    height: 30vh !important;
+    object-fit: cover;
+}
+
 .card {
     margin-bottom: 20px;
+}
+
+.card-detail {
+    width: 100% !important;
+    height: 50% !important;
+    align-items: center;
 }
 
 .card > img {
@@ -64,9 +103,12 @@ form div {
 
 footer {
     background-color: beige;
+    /* width: 90%; */
     height: 70px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    overflow-x: hidden;
 }
 
 footer img {
@@ -75,4 +117,9 @@ footer img {
 
 footer a {
     margin: 10px;
+}
+
+footer p {
+    margin-top: 14px;
+    margin-right: 10px;
 }

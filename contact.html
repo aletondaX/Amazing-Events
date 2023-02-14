@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <!-- <figure>
+            <img src="img/Logo Amazing Events.png" alt="Amazing Events Logo">
+        </figure> -->
+        <nav class="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="img/Logo Amazing Events.png" alt="Logo" width="240">
+                </a>
+                <div class="navbar">
+                    <a class="nav-link btn btn-light" href="./index.html">Home</a>
+                    <a class="nav-link btn btn-light" href="./upcoming.html">Upcoming Events</a>
+                    <a class="nav-link btn btn-light" href="./past.html">Past Events</a>
+                    <a class="nav-link active btn btn-light" href="#">Contact</a>
+                    <a class="nav-link btn btn-light" href="./stats.html">Stats</a>
+                </div>
+            </div>
+        </nav>
+        <div class="carrusel">
+            <a href="./past.html">←</a>
+            <h1>Contact Us</h1>
+            <a href="./stats.html">→</a>
+        </div>
+    </header>
+    <main>
+        <div class="d-flex justify-content-center">
+            <form class="form-column" action="show_data.html" method="get">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email">
+                <label for="msg">Message:</label>
+                <!-- <input type="text" id="msg" name="message"> -->
+                <textarea name="message" id="msg"></textarea>
+                <input type="submit" value="Send">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <a href="#"><img src="./img/instagram.png" alt=""></a>
+            <a href="#"><img src="./img/facebook.png" alt=""></a>
+            <a href="#"><img src="./img/whatsapp.png" alt=""></a>
+        </div>
+        <p>FE05-TN</p>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+</html>
