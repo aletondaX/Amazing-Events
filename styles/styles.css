@@ -2,7 +2,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    /* overflow-x: hidden; */
 }
 
 header {
@@ -12,10 +11,6 @@ header {
 .nav-link {
     margin-right: 20px;
 }
-
-/* body {
-    min-height: 100vh;
-} */
 
 main {
     background-color: blanchedalmond;
@@ -29,7 +24,6 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* text-align: center; */
 }
 
 .carrusel2 {
@@ -38,7 +32,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* text-align: center; */
 }
 
 .carrusel > a {
@@ -50,7 +43,6 @@ main {
 .form-column {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     margin: 32px auto;
 }
 
@@ -103,7 +95,6 @@ main {
 
 footer {
     background-color: beige;
-    /* width: 90%; */
     height: 70px;
     display: flex;
     align-items: center;
@@ -122,4 +113,28 @@ footer a {
 footer p {
     margin-top: 14px;
     margin-right: 10px;
+}
+
+th, td {
+    border: 1px solid black !important;
+}
+
+table {
+    margin: 16px 3px;
+}
+
+th {
+    font-weight: 600;
+    text-align: center !important;
+    width: 200px;
+}
+
+.th-head {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+td {
+    padding-left: 6px;
+    height: 10px;
 }
