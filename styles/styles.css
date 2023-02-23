@@ -9,7 +9,14 @@ header {
 }
 
 .nav-link {
-    margin-right: 20px;
+    margin-right: 10px;
+    background-color: rgb(255, 169, 88) !important;
+    padding: 2px 6px !important;
+}
+
+.nav-link.active {
+    background-color: rgba(255, 255, 255, 0) !important;
+    font-weight: 600;
 }
 
 main {
