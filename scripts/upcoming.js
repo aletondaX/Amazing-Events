@@ -3,12 +3,13 @@ document.body.onload = agregarCards;
 function agregarCards() {
     // console.log(data.events.length);
     let fechaActual = new Date(data.currentDate);
-    // console.log("Fecha Actual: " + fechaActual);
+    console.log("Fecha Actual: " + fechaActual.toLocaleDateString());
 
     for (let evento of data.events) {
         let fechaEvento = new Date(evento.date);
-        // console.log("Fecha Evento: " + fechaEvento);
+        console.log("Fecha Evento: " + fechaEvento.toLocaleDateString());
         if (fechaActual < fechaEvento) {
+            console.log("<< Es evento FUTURO >>");
             let card = document.createElement("div");
             card.setAttribute("class", "col");
             card.innerHTML = `<div class="card">
