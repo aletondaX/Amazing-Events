@@ -80,8 +80,13 @@ main {
     padding: 15px 15px 10px 15px;
 }
 
+#insertar-detail {
+    max-width: 70rem;
+    margin-top: 8rem;
+}
+
 .img-detail {
-    height: 30vh !important;
+    height: 35vh !important;
     object-fit: cover;
 }
 

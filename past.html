@@ -38,108 +38,38 @@
         <form class="form-filtros flex-wrap">
             <div class="d-flex flex-wrap">
                 <div>
-                    <input type="checkbox" id="1">
-                    <label for="1">Category</label>
+                    <input class="categoria" onclick="filtrar()" type="checkbox" id="1" value="Food Fair">
+                    <label for="1">Food Fair</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="2">
-                    <label for="2">Category</label>
+                    <input class="categoria" onclick="filtrar()" type="checkbox" id="2" value="Museum">
+                    <label for="2">Museum</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="3">
-                    <label for="3">Category</label>
+                    <input class="categoria" onclick="filtrar()" type="checkbox" id="3" value="Costume Party">
+                    <label for="3">Costume Party</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="4">
-                    <label for="4">Category</label>
+                    <input class="categoria" onclick="filtrar()" type="checkbox" id="4" value="Music Concert">
+                    <label for="4">Music Concert</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="5">
-                    <label for="5">Category</label>
+                    <input class="categoria" onclick="filtrar()" type="checkbox" id="5" value="Race">
+                    <label for="5">Race</label>
+                </div>
+                <div>
+                    <input class="categoria" onclick="filtrar()" type="checkbox" id="6" value="Book Exchange">
+                    <label for="6">Book Exchange</label>
+                </div>
+                <div>
+                    <input class="categoria" onclick="filtrar()" type="checkbox" id="7" value="Cinema">
+                    <label for="7">Cinema</label>
                 </div>
             </div>
-            <input type="text" placeholder="Search">
+            <input onkeyup="filtrar()" type="text" placeholder="Search" id="search-input">
         </form>
         <div class="cardsss">
             <div id="insertar-cards" class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
-                <!-- <div class="col">
-                    <div class="card">
-                        <img src="img/Cinema.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Cinema</h5>
-                            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi est at qui id distinctio delectus eaque quas quam facere tempore.</p>
-                            <div class="d-flex justify-content-between">
-                                <p>Price: $100</p>
-                                <a href="./details.html">see more...</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="img/Costume_Party.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Circus Show</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, alias? Dolorem iusto, soluta expedita aliquid eligendi harum sunt explicabo cum!</p>
-                            <div class="d-flex justify-content-between">
-                                <p>Price: $5</p>
-                                <a href="./details.html">see more...</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="img/Food_Fair.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Utilísima En Vivo</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa accusamus explicabo laudantium impedit quidem temporibus doloribus facilis odit magni natus.</p>
-                            <div class="d-flex justify-content-between">
-                                <p>Price: $999</p>
-                                <a href="./details.html">see more...</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="img/Marathon.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Marathon</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, repellat. Quis suscipit exercitationem autem, quo atque provident illo porro id?</p>
-                            <div class="d-flex justify-content-between">
-                                <p>Price: $500</p>
-                                <a href="./details.html">see more...</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="img/Museum_Tour.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Museum Tour</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis iure impedit aut sequi eum provident, totam eaque. Ipsum, velit earum.</p>
-                            <div class="d-flex justify-content-between">
-                                <p>Price: $100</p>
-                                <a href="./details.html">see more...</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="img/Music_Concert.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Concert</h5>
-                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis sed ad expedita laudantium. Veniam soluta, beatae totam suscipit quod a.</p>
-                            <div class="d-flex justify-content-between">
-                                <p>Price: $650</p>
-                                <a href="./details.html">see more...</a>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
     </main>
@@ -155,6 +85,7 @@
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
     <script src="./scripts/data_ae_1.js"></script>
+    <script src="./scripts/rendercards.js"></script>
     <script src="./scripts/past.js"></script>
 </body>
 
