@@ -1,5 +1,5 @@
 function renderCards(eventosFiltrados, inputText) {
-    if (eventosFiltrados.length > 0) {
+    if (eventosFiltrados.length > 0) {  // Si el filtro devuelve eventos, recorrer el array e imprimirlos
         let cards = [];
         let card;
         for (let evento of eventosFiltrados) {
@@ -11,7 +11,7 @@ function renderCards(eventosFiltrados, inputText) {
                                 <p class="card-text">${evento.description}</p>
                                 <div class="d-flex justify-content-between">
                                     <p>Price: $${evento.price}</p>
-                                    <a href="./details.html?id=${evento._id}">View Details</a>
+                                    <a href="./details.html?id=${evento.id}">View Details</a>
                                 </div>
                             </div>
                         </div>
@@ -19,7 +19,7 @@ function renderCards(eventosFiltrados, inputText) {
             cards.push(card);
         }
         document.getElementById("insertar-cards").innerHTML = cards.join("");
-    } else {
+    } else {    // Si no se encuentran eventos, imprimir la card de Not Found
         document.getElementById("insertar-cards").innerHTML = 
         `<div class="col">
             <div class="card">
