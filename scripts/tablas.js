@@ -33,34 +33,13 @@ async function printTabla2() {
         }
     }
 
-// ###########################################################################################################
-    // Traté de imprimir rows(filas) con innerHTML pero me resultó imposible.
-    // Si bien la parte de JS es perfecta, al crear un div o span en medio de la tabla,
-    // obviamente poniendole un ID para ser capturado, el navegador renderiza ese div/span fuera de la tabla.
-    // Así que decidí hacerlo con Append.
-
-    // let rows = [];
-    // let row;
-    // for (const category of categories) {
-    //         row =
-    //         `<tr>
-    //         <td>${category}</td>
-    //         <td></td>
-    //         <td></td>
-    // </tr>`;
-    // console.log(row);
-    // rows.push(row);
-    // }
-    // console.log(rows.join("\n"));
-    // document.getElementById("insertabla2").innerHTML = rows.join("\n");
-// ###########################################################################################################
-
     // A cada evento le agrego el atributo GANANCIA
     for (let evento of arrayEventos) {
         evento.ganancia = evento.estimate * evento.price;
     }
     // console.log(arrayEventos);
 
+    let rows = [];
     // Por cada categoría debo realizar una serie de operaciones:
     for (let category of categories) {
 
@@ -85,16 +64,24 @@ async function printTabla2() {
         let porcentAssist = assist_total / cap_total * 100;
         porcentAssist = porcentAssist.toFixed(2);
 
-        // Imprimo una fila por categoría, con appendChild()
-        let row = document.createElement("tr");
-        row.innerHTML = `<td>${category}</td>
-                        <td>$${ganancia}</td>
-                        <td>${porcentAssist}%</td>`;
-        document.querySelector("table").appendChild(row);
-    }
+        // Guardo cada fila en el array
+        let row = `<tr>
+                    <td>${category}</td>
+                    <td>$${ganancia}</td>
+                    <td>${porcentAssist}%</td>
+                    </tr>`;
+        rows.push(row);
+        }
+
+    // Imprimo el array de filas
+    document.getElementById("tabla2").innerHTML += rows.join("");
 }
 
 async function printTabla3() {
+    // Similar a printTabla2(), pero
+    // Trae los eventos PASADOS
+    // Calcula la ganancia y asistencia en base a ASSISTANCE en vez de ESTIMATE
+    // Imprime en la tabla 3
     let urlApi = "https://api-amazingevents.onrender.com/api/amazing-events?time=past";
     let fetchResponse = await fetch(urlApi);
     let response = await fetchResponse.json();
@@ -112,15 +99,7 @@ async function printTabla3() {
     }
     console.log(arrayEventos);
 
-    let row = document.createElement("tr");
-    row.innerHTML = `<th class="th-head" colspan="3">Past Event Statistics by Category</th>`;
-    document.querySelector("table").appendChild(row);
-    let row2 = document.createElement("tr");
-    row2.innerHTML = `<th>Category</th>
-                    <th>Revenue</th>
-                    <th>Percentage of Attendance</th>`;
-    document.querySelector("table").appendChild(row2);
-
+    let rows = [];
     for (let category of categories) {
 
         let ganancia = 0;
@@ -128,7 +107,6 @@ async function printTabla3() {
         let cap_total = 0;
 
         eventosFiltradosCategoria = arrayEventos.filter(evento => evento.category === category)
-        // console.log(eventosFiltradosCategoria);
 
         eventosFiltradosCategoria.forEach(evento => {
             ganancia += evento.ganancia;
@@ -139,12 +117,14 @@ async function printTabla3() {
         let porcentAssist = assist_total / cap_total * 100;
         porcentAssist = porcentAssist.toFixed(2);
 
-        let row = document.createElement("tr");
-        row.innerHTML = `<td>${category}</td>
-                        <td>$${ganancia}</td>
-                        <td>${porcentAssist}%</td>`;
-        document.querySelector("table").appendChild(row);
+        let row = `<tr>
+                    <td>${category}</td>
+                    <td>$${ganancia}</td>
+                    <td>${porcentAssist}%</td>
+                    </tr>`;
+        rows.push(row);
     }
+    document.getElementById("tabla3").innerHTML += rows.join("");
 }
 
 printTabla1();

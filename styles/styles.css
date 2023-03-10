@@ -131,8 +131,12 @@ th, td {
     border: 1px solid black !important;
 }
 
+#tablas {
+    margin: 0px 6px;
+}
+
 table {
-    margin: 16px 3px;
+    margin: 14px 0px;
 }
 
 th {
@@ -144,6 +148,7 @@ th {
 .th-head {
     font-size: 1.3rem;
     font-weight: 600;
+    height: 3rem;
 }
 
 td {
