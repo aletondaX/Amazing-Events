@@ -97,7 +97,6 @@ async function printTabla3() {
     for (let evento of arrayEventos) {
         evento.ganancia = evento.assistance * evento.price;
     }
-    console.log(arrayEventos);
 
     let rows = [];
     for (let category of categories) {
